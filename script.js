@@ -141,5 +141,5 @@
         }
     }
 
-    loadProjects();
+    if (projectList) loadProjects();
 })();
