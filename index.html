@@ -1,21 +1,446 @@
-<!doctype html>
+
+<!DOCTYPE html>
 <html lang="en">
+
 <head>
-<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="theme-color" content="#011C6B">
-<meta name="description" content="ZtxYuchenLabs — technology, creativity, and building things for the web.">
-<title>ZtxYuchenLabs — Portfolio</title>
-<link rel="preconnect" href="https://fonts.googleapis.com"><link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="styles.css?v=3"><script>try{let t=localStorage.getItem('theme');if(t)document.documentElement.dataset.theme=t;else if(matchMedia('(prefers-color-scheme:dark)').matches)document.documentElement.dataset.theme='dark'}catch(e){}</script>
+    <!-- Basic page configuration -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#011C6B">
+
+    <!-- SEO metadata -->
+    <meta
+        name="description"
+        content="ZtxYuchenLabs — technology, creativity, and building things for the web."
+    >
+
+    <title>ZtxYuchenLabs — Portfolio</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap"
+        rel="stylesheet"
+    >
+
+    <!-- Main stylesheet -->
+    <link rel="stylesheet" href="styles.css?v=3">
+
+    <!-- Theme initialization -->
+    <script>
+        try {
+            const savedTheme = localStorage.getItem("theme");
+
+            if (savedTheme) {
+                document.documentElement.dataset.theme = savedTheme;
+            } else if (matchMedia("(prefers-color-scheme: dark)").matches) {
+                document.documentElement.dataset.theme = "dark";
+            }
+        } catch (error) {
+            // Continue with the default theme if storage is unavailable.
+        }
+    </script>
 </head>
+
 <body>
-<header class="header"><nav class="nav container"><a class="brand" href="#home"><b>Z</b>ZtxYuchen<span>Labs</span></a><button class="menu" id="menu" aria-label="Toggle menu">☰</button><div class="links" id="links"><a class="nav-link active" href="#home" data-target="home">Home</a><a class="nav-link" href="#projects" data-target="projects">Projects</a><a class="nav-link" href="#contact" data-target="contact">Contact</a><button id="theme" class="theme" aria-label="Toggle dark mode">◐ <small>Theme</small></button></div></nav></header>
-<main>
-<section id="home" class="hero section-watch"><div class="container hero-grid"><div class="reveal"><p class="eyebrow">✳ &nbsp;TECHNOLOGY · CREATIVITY · BUILDING</p><h1>Turning ideas into <em>digital reality.</em></h1><p class="lead">Hey, I'm <strong>ZtxYuchenLabs</strong>. I explore technology, build useful things, and bring thoughtful ideas to life through code.</p><div class="actions"><a class="btn primary" href="#projects">Explore my work ↗</a><a class="btn secondary" href="#contact">Let's connect</a></div><p class="meta">Independent creator <i></i> Always learning, always building</p></div><div class="art reveal"><div class="orbit one"></div><div class="orbit two"></div><div class="code">&lt; <span>/</span> &gt;</div><div class="float top">● &nbsp; CRAFTING THE WEB</div><div class="float bottom">✳ &nbsp; Curiosity → Creation</div></div></div><a class="scroll" href="#projects">SCROLL TO EXPLORE ↓</a></section>
-<section id="projects" class="projects section-watch"><div class="container"><div class="heading reveal"><div><p class="eyebrow">SELECTED WORK</p><h2>Things I've <em>been building.</em></h2></div><p>A home for experiments, ideas, and projects. More work will find its way here as it takes shape.</p></div><div class="cards">
-<article class="project reveal"><div class="visual v1"><small>01 / WEB</small><div class="mock"><b>Build something<br>remarkable.</b><hr><hr></div></div><div class="project-body"><label>PERSONAL WEBSITE</label><h3>Digital Portfolio</h3><p>A home for my work, experiments, and the ideas I'm excited to explore.</p><div class="tags"><span>HTML</span><span>Tailwind CSS</span><span>JavaScript</span></div></div></article>
-<article class="project reveal"><div class="visual v2"><small>02 / EXPERIMENT</small><div class="orb a"></div><div class="orb b"></div><div class="orb c"></div><strong>IDEAS IN MOTION</strong></div><div class="project-body"><label>PLAYGROUND</label><h3>Creative Experiments</h3><p>Small explorations in interaction, design, and the possibilities of the web.</p><div class="tags"><span>Prototyping</span><span>UI</span><span>Creative code</span></div></div></article>
-<article class="project reveal"><div class="visual v3"><small>03 / OPEN SOURCE</small><div class="terminal"><p><i>const</i> ideas = <b>build</b>();</p><p>→ make it useful_</p></div></div><div class="project-body"><label>CODE & COMMUNITY</label><h3>Open Source Journey</h3><p>Learning in public, sharing code, and contributing to projects along the way.</p><div class="tags"><span>GitHub</span><span>Collaboration</span><span>Learning</span></div></div></article>
-</div><p class="more">Follow along with what I'm building: <a href="https://github.com/ztxyuchenlabs" target="_blank" rel="noreferrer">GitHub ↗</a></p></div></section>
-<section id="contact" class="contact section-watch"><div class="container reveal"><p class="eyebrow">HAVE A GOOD IDEA?</p><h2>Let's make something<br><em>great together.</em></h2><p>Have a project in mind, want to collaborate, or just want to say hello? My inbox is open.</p><a class="btn white" href="mailto:hello@ztxyuchenlabs.dev">Get in touch ↗</a><div class="watermark">HELLO<br>WORLD</div></div></section>
-</main><footer><div class="container foot"><a class="brand" href="#home"><b>Z</b>ZtxYuchen<span>Labs</span></a><p>Designed & built with curiosity. © <span id="year"></span> ZtxYuchenLabs</p><a href="https://github.com/ztxyuchenlabs">GitHub ↗</a></div></footer>
-<script src="script.js" defer></script></body></html>
+
+    <!-- =========================
+         HEADER & NAVIGATION
+    ========================== -->
+    <header class="header">
+
+        <nav class="nav container">
+
+            <!-- Website logo -->
+            <a class="brand" href="#home">
+                <b>Z</b>ZtxYuchen<span>Labs</span>
+            </a>
+
+            <!-- Mobile navigation button -->
+            <button
+                class="menu"
+                id="menu"
+                aria-label="Toggle navigation menu"
+                aria-controls="links"
+                aria-expanded="false"
+            >
+                ☰
+            </button>
+
+            <!-- Navigation links -->
+            <div class="links" id="links">
+
+                <a
+                    class="nav-link active"
+                    href="#home"
+                    data-target="home"
+                >
+                    Home
+                </a>
+
+                <a
+                    class="nav-link"
+                    href="#projects"
+                    data-target="projects"
+                >
+                    Projects
+                </a>
+
+                <a
+                    class="nav-link"
+                    href="#contact"
+                    data-target="contact"
+                >
+                    Contact
+                </a>
+
+                <!-- Dark mode toggle -->
+                <button
+                    id="theme"
+                    class="theme"
+                    aria-label="Toggle dark mode"
+                >
+                    ◐ <small>Theme</small>
+                </button>
+
+            </div>
+        </nav>
+    </header>
+
+
+    <!-- =========================
+         MAIN CONTENT
+    ========================== -->
+    <main>
+
+        <!-- =========================
+             HERO / HOME SECTION
+        ========================== -->
+        <section id="home" class="hero section-watch">
+
+            <div class="container hero-grid">
+
+                <!-- Hero introduction -->
+                <div class="reveal">
+
+                    <p class="eyebrow">
+                        ✳ &nbsp; TECHNOLOGY · CREATIVITY · BUILDING
+                    </p>
+
+                    <h1>
+                        Turning ideas into
+                        <em>digital reality.</em>
+                    </h1>
+
+                    <p class="lead">
+                        Hey, I'm <strong>ZtxYuchenLabs</strong>.
+                        I explore technology, build useful things,
+                        and bring thoughtful ideas to life through code.
+                    </p>
+
+                    <!-- Hero action buttons -->
+                    <div class="actions">
+
+                        <a class="btn primary" href="#projects">
+                            Explore my work ↗
+                        </a>
+
+                        <a class="btn secondary" href="#contact">
+                            Let's connect
+                        </a>
+
+                    </div>
+
+                    <!-- Short introduction metadata -->
+                    <p class="meta">
+                        Independent creator
+                        <i></i>
+                        Always learning, always building
+                    </p>
+
+                </div>
+
+
+                <!-- Hero visual artwork -->
+                <div class="art reveal">
+
+                    <div class="orbit one"></div>
+                    <div class="orbit two"></div>
+
+                    <div class="code">
+                        &lt; <span>/</span> &gt;
+                    </div>
+
+                    <div class="float top">
+                        ● &nbsp; CRAFTING THE WEB
+                    </div>
+
+                    <div class="float bottom">
+                        ✳ &nbsp; Curiosity → Creation
+                    </div>
+
+                </div>
+
+            </div>
+
+            <!-- Scroll indicator -->
+            <a class="scroll" href="#projects">
+                SCROLL TO EXPLORE ↓
+            </a>
+
+        </section>
+
+
+        <!-- =========================
+             PROJECTS SECTION
+        ========================== -->
+        <section id="projects" class="projects section-watch">
+
+            <div class="container">
+
+                <!-- Projects heading -->
+                <div class="heading reveal">
+
+                    <div>
+                        <p class="eyebrow">SELECTED WORK</p>
+
+                        <h2>
+                            Things I've
+                            <em>been building.</em>
+                        </h2>
+                    </div>
+
+                    <p>
+                        A home for experiments, ideas, and projects.
+                        More work will find its way here as it takes shape.
+                    </p>
+
+                </div>
+
+
+                <!-- Project cards -->
+                <div class="cards">
+
+
+                    <!-- Project 01: Personal Portfolio -->
+                    <article class="project reveal">
+
+                        <div class="visual v1">
+
+                            <small>01 / WEB</small>
+
+                            <div class="mock">
+                                <b>
+                                    Build something<br>
+                                    remarkable.
+                                </b>
+
+                                <hr>
+                                <hr>
+                            </div>
+
+                        </div>
+
+                        <div class="project-body">
+
+                            <label>PERSONAL WEBSITE</label>
+
+                            <h3>Digital Portfolio</h3>
+
+                            <p>
+                                A home for my work, experiments,
+                                and the ideas I'm excited to explore.
+                            </p>
+
+                            <div class="tags">
+                                <span>HTML</span>
+                                <span>Tailwind CSS</span>
+                                <span>JavaScript</span>
+                            </div>
+
+                        </div>
+
+                    </article>
+
+
+                    <!-- Project 02: Creative Experiments -->
+                    <article class="project reveal">
+
+                        <div class="visual v2">
+
+                            <small>02 / EXPERIMENT</small>
+
+                            <div class="orb a"></div>
+                            <div class="orb b"></div>
+                            <div class="orb c"></div>
+
+                            <strong>IDEAS IN MOTION</strong>
+
+                        </div>
+
+                        <div class="project-body">
+
+                            <label>PLAYGROUND</label>
+
+                            <h3>Creative Experiments</h3>
+
+                            <p>
+                                Small explorations in interaction,
+                                design, and the possibilities of the web.
+                            </p>
+
+                            <div class="tags">
+                                <span>Prototyping</span>
+                                <span>UI</span>
+                                <span>Creative code</span>
+                            </div>
+
+                        </div>
+
+                    </article>
+
+
+                    <!-- Project 03: Open Source -->
+                    <article class="project reveal">
+
+                        <div class="visual v3">
+
+                            <small>03 / OPEN SOURCE</small>
+
+                            <div class="terminal">
+
+                                <p>
+                                    <i>const</i> ideas = <b>build</b>();
+                                </p>
+
+                                <p>
+                                    → make it useful_
+                                </p>
+
+                            </div>
+
+                        </div>
+
+                        <div class="project-body">
+
+                            <label>CODE & COMMUNITY</label>
+
+                            <h3>Open Source Journey</h3>
+
+                            <p>
+                                Learning in public, sharing code,
+                                and contributing to projects along the way.
+                            </p>
+
+                            <div class="tags">
+                                <span>GitHub</span>
+                                <span>Collaboration</span>
+                                <span>Learning</span>
+                            </div>
+
+                        </div>
+
+                    </article>
+
+                </div>
+
+
+                <!-- More projects / GitHub link -->
+                <p class="more">
+                    Follow along with what I'm building:
+
+                    <a
+                        href="https://github.com/ztxyuchenlabs"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                    >
+                        GitHub ↗
+                    </a>
+                </p>
+
+            </div>
+        </section>
+
+
+        <!-- =========================
+             CONTACT SECTION
+        ========================== -->
+        <section id="contact" class="contact section-watch">
+
+            <div class="container reveal">
+
+                <p class="eyebrow">
+                    HAVE A GOOD IDEA?
+                </p>
+
+                <h2>
+                    Let's make something<br>
+                    <em>great together.</em>
+                </h2>
+
+                <p>
+                    Have a project in mind, want to collaborate,
+                    or just want to say hello?
+                    My inbox is open.
+                </p>
+
+                <!-- Email contact button -->
+                <a
+                    class="btn white"
+                    href="mailto:hello@ztxyuchenlabs.dev"
+                >
+                    Get in touch ↗
+                </a>
+
+                <!-- Decorative background text -->
+                <div class="watermark">
+                    HELLO<br>
+                    WORLD
+                </div>
+
+            </div>
+        </section>
+
+    </main>
+
+
+    <!-- =========================
+         FOOTER
+    ========================== -->
+    <footer>
+
+        <div class="container foot">
+
+            <!-- Footer logo -->
+            <a class="brand" href="#home">
+                <b>Z</b>ZtxYuchen<span>Labs</span>
+            </a>
+
+            <!-- Copyright information -->
+            <p>
+                Designed & built with curiosity.
+                © <span id="year"></span> ZtxYuchenLabs
+            </p>
+
+            <!-- GitHub profile -->
+            <a
+                href="https://github.com/ztxyuchenlabs"
+                target="_blank"
+                rel="noopener noreferrer"
+            >
+                GitHub ↗
+            </a>
+
+        </div>
+
+    </footer>
+
+
+    <!-- =========================
+         JAVASCRIPT
+    ========================== -->
+    <script src="script.js" defer></script>
+
+</body>
+</html>
