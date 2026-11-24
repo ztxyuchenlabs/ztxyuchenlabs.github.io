@@ -47,6 +47,13 @@ jobs:
           fi
           mkdir -p _site
           cp index.html projects.html script.js styles.css projects.json _site/
+          cp -R projects project-page.js _site/
+          test -s _site/project-page.js
+          test -s _site/projects/resolvedesk/project-page.html
+          test -s _site/projects/assetledger/project-page.html
+          test -s _site/projects/theta/project-page.html
+          test -s _site/projects/edulearn/project-page.html
+          echo "Project detail pages and shared data loader verified."
           echo "Files included in Pages artifact:"
           ls -lah _site
           grep -q '.project-search' _site/styles.css
