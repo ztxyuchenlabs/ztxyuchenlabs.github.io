@@ -119,23 +119,73 @@
         return card;
     }
 
+    const searchForm = document.getElementById("project-search");
+    const searchInput = document.getElementById("project-search-input");
+    const searchClear = document.getElementById("project-search-clear");
+    const searchCount = document.getElementById("project-search-count");
+    let allProjects = [];
+
+    function renderProjects(projects) {
+        projectList.replaceChildren();
+        if (!projects.length) {
+            projectList.append(makeElement("p", "project-status", allProjects.length
+                ? "No projects match your search. Try another title or technology."
+                : "Projects will be added here soon."));
+        } else {
+            projects.forEach((project, index) => projectList.append(createProjectCard(project, allProjects.indexOf(project))));
+            projectList.querySelectorAll(".reveal").forEach(element => reveal.observe(element));
+        }
+        if (searchCount) {
+            searchCount.textContent = allProjects.length
+                ? (projects.length === allProjects.length ? allProjects.length + " projects" : projects.length + " of " + allProjects.length + " projects")
+                : "";
+        }
+    }
+
+    function searchProjects(query) {
+        const term = query.trim().toLocaleLowerCase();
+        if (!term) {
+            renderProjects(allProjects);
+            return;
+        }
+        const matches = allProjects.filter(project => {
+            const searchableFields = [
+                project.title,
+                ...(Array.isArray(project.frontend) ? project.frontend : []),
+                ...(Array.isArray(project.backend) ? project.backend : []),
+                ...(Array.isArray(project.database) ? project.database : [])
+            ];
+            return searchableFields.some(value => typeof value === "string" && value.toLocaleLowerCase().includes(term));
+        });
+        renderProjects(matches);
+    }
+
+    if (searchForm) {
+        searchForm.addEventListener("submit", event => {
+            event.preventDefault();
+            searchProjects(searchInput.value);
+        });
+    }
+    if (searchClear) {
+        searchClear.addEventListener("click", () => {
+            searchInput.value = "";
+            searchProjects("");
+            searchInput.focus();
+        });
+    }
+
     async function loadProjects() {
         try {
             const response = await fetch("./projects.json", { cache: "no-cache" });
             if (!response.ok) throw new Error("Could not load projects.json (" + response.status + ")");
             const data = await response.json();
             if (!data || !Array.isArray(data.projects)) throw new Error("projects.json must contain a projects array.");
-
-            projectList.replaceChildren();
-            if (!data.projects.length) {
-                projectList.append(makeElement("p", "project-status", "Projects will be added here soon."));
-            } else {
-                data.projects.forEach((project, index) => projectList.append(createProjectCard(project, index)));
-                projectList.querySelectorAll(".reveal").forEach(element => reveal.observe(element));
-            }
+            allProjects = data.projects;
+            renderProjects(allProjects);
         } catch (error) {
             console.error("Project loading failed:", error);
             projectList.replaceChildren(makeElement("p", "project-status", "Projects couldn't be loaded. Please try again later."));
+            if (searchCount) searchCount.textContent = "";
         } finally {
             projectList.setAttribute("aria-busy", "false");
         }
