@@ -1,0 +1,108 @@
+{
+  "projects": [
+    {
+      "id": 1,
+      "title": "ResolveDesk",
+      "frontend": [
+        "react",
+        "tailwindcss",
+        "inertiaJS"
+      ],
+      "backend": [
+        "laravel",
+        "php"
+      ],
+      "database": [
+        "mysql",
+        "mongoDB",
+        "redis"
+      ],
+      "license": "GNU GPL 3.0",
+      "summary": "ResolveDesk is a Support Ticket Management System with Enterprise features",
+      "pictures": [
+        "https://fastly.picsum.photos/id/6/5000/3333.jpg?hmac=pq9FRpg2xkAQ7J9JTrBtyFcp9-qvlu8ycAi7bUHlL7I",
+        "https://fastly.picsum.photos/id/5/5000/3334.jpg?hmac=R_jZuyT1jbcfBlpKFxAb0Q3lof9oJ0kREaxsYV3MgCc",
+        "https://fastly.picsum.photos/id/8/5000/3333.jpg?hmac=OeG5ufhPYQBd6Rx1TAldAuF92lhCzAhKQKttGfawWuA"
+      ],
+      "githubLink": "github.com/ztxyuchenlabs/ResolveDesk",
+      "docsLink": "gitbook.com/ztxyuchenlabs/ResolveDesk",
+      "youtubeLink": "youtube.com/playlist"
+    },
+    {
+      "id": 2,
+      "title": "AssetLedger",
+      "frontend": [
+        "react",
+        "tailwindcss",
+        "inertiaJS"
+      ],
+      "backend": [
+        "laravel",
+        "php"
+      ],
+      "database": [
+        "mysql",
+        "mongoDB",
+        "redis"
+      ],
+      "license": "GNU GPL 3.0",
+      "summary": "AssetLedger is a Equipment/Assets Management System with Enterprise features",
+      "pictures": [
+        "https://fastly.picsum.photos/id/6/5000/3333.jpg?hmac=pq9FRpg2xkAQ7J9JTrBtyFcp9-qvlu8ycAi7bUHlL7I",
+        "https://fastly.picsum.photos/id/5/5000/3334.jpg?hmac=R_jZuyT1jbcfBlpKFxAb0Q3lof9oJ0kREaxsYV3MgCc",
+        "https://fastly.picsum.photos/id/8/5000/3333.jpg?hmac=OeG5ufhPYQBd6Rx1TAldAuF92lhCzAhKQKttGfawWuA"
+      ],
+      "githubLink": "github.com/ztxyuchenlabs/AssetLedger",
+      "docsLink": "gitbook.com/ztxyuchenlabs/AssetLedger",
+      "youtubeLink": "youtube.com/playlist"
+    },
+    {
+      "id": 3,
+      "title": "Theta",
+      "frontend": [
+        "nativewind"
+      ],
+      "backend": [
+        "typescript",
+        "react native expo"
+      ],
+      "database": [
+        "sqlite"
+      ],
+      "license": "GNU GPL 3.0",
+      "summary": "Theta is a local first AI chat application for Android and Windows with optional bring your own AI keys",
+      "pictures": [
+        "https://fastly.picsum.photos/id/6/5000/3333.jpg?hmac=pq9FRpg2xkAQ7J9JTrBtyFcp9-qvlu8ycAi7bUHlL7I",
+        "https://fastly.picsum.photos/id/5/5000/3334.jpg?hmac=R_jZuyT1jbcfBlpKFxAb0Q3lof9oJ0kREaxsYV3MgCc",
+        "https://fastly.picsum.photos/id/8/5000/3333.jpg?hmac=OeG5ufhPYQBd6Rx1TAldAuF92lhCzAhKQKttGfawWuA"
+      ],
+      "githubLink": "github.com/ztxyuchenlabs/Theta",
+      "docsLink": "gitbook.com/ztxyuchenlabs/Theta",
+      "youtubeLink": "youtube.com/playlist"
+    },
+    {
+      "id": 4,
+      "title": "EduLearn",
+      "frontend": [
+        "tailwindcss"
+      ],
+      "backend": [
+        "typescript",
+        "nextJS"
+      ],
+      "database": [
+        "mysql"
+      ],
+      "license": "GNU GPL 3.0",
+      "summary": "EduLearn is a Learning Management System",
+      "pictures": [
+        "https://fastly.picsum.photos/id/6/5000/3333.jpg?hmac=pq9FRpg2xkAQ7J9JTrBtyFcp9-qvlu8ycAi7bUHlL7I",
+        "https://fastly.picsum.photos/id/5/5000/3334.jpg?hmac=R_jZuyT1jbcfBlpKFxAb0Q3lof9oJ0kREaxsYV3MgCc",
+        "https://fastly.picsum.photos/id/8/5000/3333.jpg?hmac=OeG5ufhPYQBd6Rx1TAldAuF92lhCzAhKQKttGfawWuA"
+      ],
+      "githubLink": "github.com/ztxyuchenlabs/EduLearn",
+      "docsLink": "gitbook.com/ztxyuchenlabs/EduLearn",
+      "youtubeLink": "youtube.com/playlist"
+    }
+  ]
+}
