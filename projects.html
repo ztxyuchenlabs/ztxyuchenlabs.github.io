@@ -41,6 +41,13 @@
                     </div>
                     <p>A collection of tools, experiments, and ideas brought to life through code. Each project is loaded directly from the portfolio project data.</p>
                 </div>
+                <form class="project-search" id="project-search" role="search" aria-label="Search projects">
+                    <label class="sr-only" for="project-search-input">Search by project title or technology</label>
+                    <input id="project-search-input" type="search" placeholder="Search title, frontend, backend, or database..." autocomplete="off">
+                    <button class="project-search-submit" type="submit">Search</button>
+                    <button class="project-search-clear" id="project-search-clear" type="button">Clear</button>
+                </form>
+                <p class="project-search-count" id="project-search-count" aria-live="polite"></p>
                 <div class="cards project-list" id="project-list" aria-live="polite" aria-busy="true">
                     <p class="project-status">Loading projects...</p>
                 </div>
