@@ -52,7 +52,7 @@ jobs:
         uses: actions/upload-pages-artifact@v3
         with:
           path: _site/
-          name: ztxyuchenlabs-site
+          name: ztxyuchenlabs-site-${{ github.run_attempt }}
 
   deploy:
     environment:
@@ -65,4 +65,4 @@ jobs:
         id: deployment
         uses: actions/deploy-pages@v4
         with:
-          artifact_name: ztxyuchenlabs-site
+          artifact_name: ztxyuchenlabs-site-${{ github.run_attempt }}
