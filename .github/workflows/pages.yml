@@ -20,9 +20,11 @@ jobs:
           node-version: 20
       - run: npm install
       - run: npm run build
-      - uses: actions/upload-pages-artifact@v3
+      - name: Upload site artifact
+        uses: actions/upload-pages-artifact@v3
         with:
           path: .
+          artifact_name: ztxyuchenlabs-site
   deploy:
     environment:
       name: github-pages
@@ -32,3 +34,5 @@ jobs:
     steps:
       - id: deployment
         uses: actions/deploy-pages@v4
+        with:
+          artifact_name: ztxyuchenlabs-site
