@@ -37,6 +37,10 @@ jobs:
         run: |
           set -eux
           test -s styles.css
+          grep -q 'id="project-search"' projects.html
+          grep -q 'id="project-search-input"' projects.html
+          grep -q 'function searchProjects' script.js
+          grep -q 'project-search' src/input.css
           if grep -q '@tailwind' styles.css; then
             echo "Tailwind directives were not compiled."
             exit 1
@@ -45,6 +49,9 @@ jobs:
           cp index.html projects.html script.js styles.css projects.json _site/
           echo "Files included in Pages artifact:"
           ls -lah _site
+          grep -q '.project-search' _site/styles.css
+          grep -q 'id="project-search"' _site/projects.html
+          echo "Search UI, filtering code, and compiled styles verified."
           echo "Stylesheet size:"
           wc -c _site/styles.css
 
