@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#011C6B">
+    <meta name="description" content="Project details from ZtxYuchenLabs.">
+    <title>Project — ZtxYuchenLabs</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../../styles.css?v=6">
+    <script>
+        try {
+            const savedTheme = localStorage.getItem("theme");
+            if (savedTheme) document.documentElement.dataset.theme = savedTheme;
+            else if (matchMedia("(prefers-color-scheme: dark)").matches) document.documentElement.dataset.theme = "dark";
+        } catch (error) {}
+    </script>
+</head>
+<body>
+    <header class="header">
+        <nav class="nav container">
+            <a class="brand" href="../../index.html#home"><b>Z</b>ZtxYuchen<span>Labs</span></a>
+            <button class="menu" id="menu" aria-label="Toggle navigation menu" aria-controls="links" aria-expanded="false">☰</button>
+            <div class="links" id="links">
+                <a class="nav-link" href="../../index.html#home">Home</a>
+                <a class="nav-link active" href="../../projects.html" aria-current="page">Projects</a>
+                <a class="nav-link" href="../../index.html#contact">Contact</a>
+                <button id="theme" class="theme" aria-label="Toggle dark mode">◐ <small>Theme</small></button>
+            </div>
+        </nav>
+    </header>
+    <main class="project-detail">
+        <div class="container project-detail-shell" id="project-detail-content" data-project-id="2" aria-live="polite" aria-busy="true">
+            <p class="project-detail-status">Loading project details...</p>
+        </div>
+    </main>
+    <footer><div class="container foot">
+        <a class="brand" href="../../index.html#home"><b>Z</b>ZtxYuchen<span>Labs</span></a>
+        <p>Designed &amp; built with curiosity. © <span id="year"></span> ZtxYuchenLabs</p>
+        <a href="https://github.com/ztxyuchenlabs" target="_blank" rel="noopener noreferrer">GitHub ↗</a>
+    </div></footer>
+    <script src="../../project-page.js" defer></script>
+</body>
+</html>
