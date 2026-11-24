@@ -166,6 +166,9 @@
             searchProjects(searchInput.value);
         });
     }
+    if (searchInput) {
+        searchInput.addEventListener("input", () => searchProjects(searchInput.value));
+    }
     if (searchClear) {
         searchClear.addEventListener("click", () => {
             searchInput.value = "";
