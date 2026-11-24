@@ -74,7 +74,23 @@
     }
 
     function createProjectCard(project, index) {
-        const card = makeElement("article", "project reveal");
+        const card = makeElement("article", "project project-card-link reveal");
+        const projectSlug = String(project.title || "project").toLowerCase().trim()
+            .replace(/[^a-z0-9]+/g, "-").replace(/^-+|-+$/g, "") || "project";
+        const projectUrl = "./projects/" + projectSlug + "/project-page.html";
+        card.tabIndex = 0;
+        card.setAttribute("role", "link");
+        card.setAttribute("aria-label", "View " + (project.title || "project") + " project details");
+        card.addEventListener("click", event => {
+            if (event.target.closest("a")) return;
+            window.location.href = projectUrl;
+        });
+        card.addEventListener("keydown", event => {
+            if ((event.key === "Enter" || event.key === " ") && !event.target.closest("a")) {
+                event.preventDefault();
+                window.location.href = projectUrl;
+            }
+        });
         const visual = makeElement("div", "project-image");
         const picture = Array.isArray(project.pictures) ? project.pictures.find(url => safeExternalUrl(url)) : null;
 
