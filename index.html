@@ -219,132 +219,15 @@
                 </div>
 
 
-                <!-- Project cards -->
-                <div class="cards">
-
-
-                    <!-- Project 01: Personal Portfolio -->
-                    <article class="project reveal">
-
-                        <div class="visual v1">
-
-                            <small>01 / WEB</small>
-
-                            <div class="mock">
-                                <b>
-                                    Build something<br>
-                                    remarkable.
-                                </b>
-
-                                <hr>
-                                <hr>
-                            </div>
-
-                        </div>
-
-                        <div class="project-body">
-
-                            <label>PERSONAL WEBSITE</label>
-
-                            <h3>Digital Portfolio</h3>
-
-                            <p>
-                                A home for my work, experiments,
-                                and the ideas I'm excited to explore.
-                            </p>
-
-                            <div class="tags">
-                                <span>HTML</span>
-                                <span>Tailwind CSS</span>
-                                <span>JavaScript</span>
-                            </div>
-
-                        </div>
-
-                    </article>
-
-
-                    <!-- Project 02: Creative Experiments -->
-                    <article class="project reveal">
-
-                        <div class="visual v2">
-
-                            <small>02 / EXPERIMENT</small>
-
-                            <div class="orb a"></div>
-                            <div class="orb b"></div>
-                            <div class="orb c"></div>
-
-                            <strong>IDEAS IN MOTION</strong>
-
-                        </div>
-
-                        <div class="project-body">
-
-                            <label>PLAYGROUND</label>
-
-                            <h3>Creative Experiments</h3>
-
-                            <p>
-                                Small explorations in interaction,
-                                design, and the possibilities of the web.
-                            </p>
-
-                            <div class="tags">
-                                <span>Prototyping</span>
-                                <span>UI</span>
-                                <span>Creative code</span>
-                            </div>
-
-                        </div>
-
-                    </article>
-
-
-                    <!-- Project 03: Open Source -->
-                    <article class="project reveal">
-
-                        <div class="visual v3">
-
-                            <small>03 / OPEN SOURCE</small>
-
-                            <div class="terminal">
-
-                                <p>
-                                    <i>const</i> ideas = <b>build</b>();
-                                </p>
-
-                                <p>
-                                    → make it useful_
-                                </p>
-
-                            </div>
-
-                        </div>
-
-                        <div class="project-body">
-
-                            <label>CODE & COMMUNITY</label>
-
-                            <h3>Open Source Journey</h3>
-
-                            <p>
-                                Learning in public, sharing code,
-                                and contributing to projects along the way.
-                            </p>
-
-                            <div class="tags">
-                                <span>GitHub</span>
-                                <span>Collaboration</span>
-                                <span>Learning</span>
-                            </div>
-
-                        </div>
-
-                    </article>
-
+                <!-- Projects are loaded from projects.json by script.js -->
+                <div
+                    class="cards project-list"
+                    id="project-list"
+                    aria-live="polite"
+                    aria-busy="true"
+                >
+                    <p class="project-status">Loading projects...</p>
                 </div>
-
 
                 <!-- More projects / GitHub link -->
                 <p class="more">
